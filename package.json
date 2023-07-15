@@ -1,4 +1,5 @@
 {
+  "type": "module",
   "name": "the-edu-app",
   "version": "0.1.0",
   "private": true,
@@ -8,10 +9,14 @@
     "start": "next start",
     "lint": "next lint"
   },
+  "prisma": {
+    "seed": "ts-node prisma/seed.ts"
+  },
   "dependencies": {
     "@apollo/server": "^4.7.5",
     "@as-integrations/next": "^2.0.1",
-    "@types/node": "20.4.2",
+    "@prisma/client": "5.0.0",
+    "@types/node": "^20.4.2",
     "@types/react": "18.2.15",
     "@types/react-dom": "18.2.7",
     "autoprefixer": "10.4.14",
@@ -21,9 +26,11 @@
     "graphql-tag": "^2.12.6",
     "next": "13.4.10",
     "postcss": "8.4.26",
+    "prisma": "^5.0.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "tailwindcss": "3.3.3",
-    "typescript": "5.1.6"
+    "ts-node": "^10.9.1",
+    "typescript": "^5.1.6"
   }
 }

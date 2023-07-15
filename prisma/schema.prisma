@@ -1,0 +1,44 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Institution {
+  id      String @id @default(uuid())
+  name    String
+  address String
+  country String
+  region  String
+}
+
+// model Subject {
+//   name            String
+//   academic_papers String
+//   students_total  String
+//   student_rating  String
+//   Submission      Submission? @relation(fields: [submissionId], references: [id])
+//   submissionId    String?
+
+//   @@unique([name])
+//   @@index([name])
+// }
+
+// model Submission {
+//   id                   String    @id @default(uuid())
+//   institution_id       String
+//   year                 Int
+//   students_total       Int
+//   undergraduates_total Int
+//   postgraduates_total  Int
+//   staff_total          Int
+//   academic_papers      Int
+//   institution_income   Int
+//   subjects             Subject[]
+// }
