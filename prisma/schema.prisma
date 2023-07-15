@@ -19,15 +19,13 @@ model Institution {
 }
 
 model Subject {
+  id              String    @id @default(uuid())
   name            String
   academic_papers Int
   students_total  Int
   student_rating  Int
   Submission      Submission? @relation(fields: [submissionId], references: [id])
   submissionId    String?
-
-  @@unique([name])
-  // @@index([name])
 }
 
 model Submission {

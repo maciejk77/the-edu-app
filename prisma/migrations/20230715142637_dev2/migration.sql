@@ -11,11 +11,14 @@ CREATE TABLE "Institution" (
 
 -- CreateTable
 CREATE TABLE "Subject" (
+    "id" TEXT NOT NULL,
     "name" TEXT NOT NULL,
     "academic_papers" INTEGER NOT NULL,
     "students_total" INTEGER NOT NULL,
     "student_rating" INTEGER NOT NULL,
-    "submissionId" TEXT
+    "submissionId" TEXT,
+
+    CONSTRAINT "Subject_pkey" PRIMARY KEY ("id")
 );
 
 -- CreateTable
@@ -32,9 +35,6 @@ CREATE TABLE "Submission" (
 
     CONSTRAINT "Submission_pkey" PRIMARY KEY ("id")
 );
-
--- CreateIndex
-CREATE UNIQUE INDEX "Subject_name_key" ON "Subject"("name");
 
 -- AddForeignKey
 ALTER TABLE "Subject" ADD CONSTRAINT "Subject_submissionId_fkey" FOREIGN KEY ("submissionId") REFERENCES "Submission"("id") ON DELETE SET NULL ON UPDATE CASCADE;
