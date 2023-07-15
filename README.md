@@ -17,7 +17,8 @@ Clone repo and run `yarn dev` for dev mode
 
 ## Notes
 
-- Important: `npx prisma generate` to generate Prisma Client
-- Important: `npx prisma db seed` for seeding Institutions/Submissions DB tables
-- `npx prisma migrate dev` for DB migration
-- `npx prisma format` for formatting schema.prisma file
+- Init: `npx prisma generate` to generate Prisma Client
+- Migration: `npx prisma migrate dev` for DB migration
+- Seeding: `npx prisma db seed` for seeding Institutions/Submissions DB tables
+- Formatting: `npx prisma format` for formatting schema.prisma file
+- Preview: `npx prisma studio` for tables preview

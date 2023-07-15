@@ -18,27 +18,27 @@ model Institution {
   region  String
 }
 
-// model Subject {
-//   name            String
-//   academic_papers String
-//   students_total  String
-//   student_rating  String
-//   Submission      Submission? @relation(fields: [submissionId], references: [id])
-//   submissionId    String?
+model Subject {
+  name            String
+  academic_papers String
+  students_total  String
+  student_rating  String
+  Submission      Submission? @relation(fields: [submissionId], references: [id])
+  submissionId    String?
 
-//   @@unique([name])
-//   @@index([name])
-// }
+  @@unique([name])
+  @@index([name])
+}
 
-// model Submission {
-//   id                   String    @id @default(uuid())
-//   institution_id       String
-//   year                 Int
-//   students_total       Int
-//   undergraduates_total Int
-//   postgraduates_total  Int
-//   staff_total          Int
-//   academic_papers      Int
-//   institution_income   Int
-//   subjects             Subject[]
-// }
+model Submission {
+  id                   String    @id @default(uuid())
+  institution_id       String
+  year                 Int
+  students_total       Int
+  undergraduates_total Int
+  postgraduates_total  Int
+  staff_total          Int
+  academic_papers      Int
+  institution_income   Int
+  subjects             Subject[]
+}
