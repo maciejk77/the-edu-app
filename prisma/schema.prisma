@@ -20,14 +20,14 @@ model Institution {
 
 model Subject {
   name            String
-  academic_papers String
-  students_total  String
-  student_rating  String
+  academic_papers Int
+  students_total  Int
+  student_rating  Int
   Submission      Submission? @relation(fields: [submissionId], references: [id])
   submissionId    String?
 
   @@unique([name])
-  @@index([name])
+  // @@index([name])
 }
 
 model Submission {
