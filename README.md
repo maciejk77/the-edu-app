@@ -14,11 +14,10 @@ Clone repo and run `yarn dev` for dev mode
 - Table layout for `submissions` page
 - Filtering and displaying more data
 - Adding new data to collection (DB seed)
-
 - Charts
-- Protect routes
-- Authentication
-- Tests
+- Protect routes?
+- Authentication?
+- Tests?
 
 ## Notes
 
