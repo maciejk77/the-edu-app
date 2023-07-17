@@ -10,6 +10,11 @@ Clone repo and run `yarn dev` for dev mode
 
 ## To do
 
+- More on GraphQL API
+- Table layout for `submissions` page
+- Filtering and displaying more data
+- Adding new data to collection (DB seed)
+
 - Charts
 - Protect routes
 - Authentication
@@ -22,6 +27,9 @@ Clone repo and run `yarn dev` for dev mode
 - Seeding: `npx prisma db seed` for seeding Institutions/Submissions DB tables
 - Formatting: `npx prisma format` for formatting schema.prisma file
 - Preview: `npx prisma studio` for tables preview
+- GraphQL data is rendered on pages `/submissions` and `/subjects`
+
+## Queries/Mutations
 
 Working API can be tested at `http://localhost:3000/api/graphql`
 Copy/paste examples of queries
