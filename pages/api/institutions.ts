@@ -2,6 +2,8 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import INSTITUTIONS_SEED_DATA from '../../data/institutions.json';
 
+// test endpoint
+
 interface IInstitution {
   name: string;
   address: string;

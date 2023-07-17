@@ -2,7 +2,7 @@ import { buildSchemaSync, Resolver, Query } from 'type-graphql';
 
 @Resolver()
 class HelloTestResolver {
-  @Query(() => String)
+  @Query((_returns) => String)
   hello() {
     return 'Hello Test!';
   }

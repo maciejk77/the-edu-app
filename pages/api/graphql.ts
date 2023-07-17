@@ -1,10 +1,9 @@
 import 'reflect-metadata';
 import { NextApiRequest, NextApiResponse } from 'next';
 import { ApolloServer } from 'apollo-server-micro';
+import { prisma, PrismaClient } from '../../prisma/prisma';
 import { schema } from './schema';
 import Cors from 'cors';
-import { PrismaClient } from '@prisma/client';
-import { prisma } from '../../prisma/prisma';
 
 interface IContext {
   req: NextApiRequest;

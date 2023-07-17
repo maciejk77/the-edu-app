@@ -12,6 +12,7 @@
     "seed": "ts-node prisma/seed.ts"
   },
   "dependencies": {
+    "@apollo/client": "^3.7.17",
     "@apollo/server": "^4.7.5",
     "@as-integrations/next": "^2.0.1",
     "@prisma/client": "5.0.0",

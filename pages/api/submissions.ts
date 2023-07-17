@@ -2,6 +2,8 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import SUBMISSIONS_SEED_DATA from '../../data/submissions.json';
 
+// test endpoint
+
 export interface ISubject {
   name: string;
   academic_papers: number;
