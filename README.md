@@ -22,3 +22,48 @@ Clone repo and run `yarn dev` for dev mode
 - Seeding: `npx prisma db seed` for seeding Institutions/Submissions DB tables
 - Formatting: `npx prisma format` for formatting schema.prisma file
 - Preview: `npx prisma studio` for tables preview
+
+Working API can be tested at `http://localhost:3000/api/graphql`
+
+Copy/paste examples of queries
+
+```
+{
+  institutions {
+    id
+    name
+    address
+    country
+    region
+  }
+}
+```
+
+```
+{
+  subjects {
+    id
+    name
+    academic_papers
+    students_total
+    student_rating
+    submissionId
+  }
+}
+```
+
+```
+{
+  submissions {
+    id
+    institution_id
+    year
+    students_total
+    undergraduates_total
+    postgraduates_total
+    staff_total
+    academic_papers
+    institution_income
+  }
+}
+```
