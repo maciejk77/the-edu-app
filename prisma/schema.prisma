@@ -25,7 +25,10 @@ model Subject {
   students_total  Int
   student_rating  Int
   Submission      Submission? @relation(fields: [submissionId], references: [id])
-  submissionId    String?
+  submissionId    String? @map(name: "submission_id")
+
+  @@index([submissionId], name: "Subjects.submissionId")
+  @@map(name: "subjects")
 }
 
 model Submission {

@@ -9,7 +9,7 @@ interface IContext {
   req: NextApiRequest;
 }
 
-interface Context {
+export interface Context {
   prisma: PrismaClient;
 }
 

@@ -3,6 +3,37 @@
 # !!!   DO NOT MODIFY THIS FILE BY YOURSELF   !!!
 # -----------------------------------------------
 
+type Institution {
+  address: String!
+  country: String!
+  id: String!
+  name: String!
+  region: String!
+}
+
 type Query {
-  hello: String!
+  institutions: [Institution!]
+  subjects: [Subject!]
+  submissions: [Submission!]
+}
+
+type Subject {
+  academic_papers: Int!
+  id: String!
+  name: String!
+  student_rating: Int!
+  students_total: Int!
+  submissionId: String!
+}
+
+type Submission {
+  academic_papers: Int!
+  id: String!
+  institution_id: String!
+  institution_income: Int!
+  postgraduates_total: Int!
+  staff_total: Int!
+  students_total: Int!
+  undergraduates_total: Int!
+  year: Int!
 }
