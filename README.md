@@ -24,8 +24,9 @@ Clone repo and run `yarn dev` for dev mode
 - Preview: `npx prisma studio` for tables preview
 
 Working API can be tested at `http://localhost:3000/api/graphql`
-
 Copy/paste examples of queries
+
+- All items
 
 ```
 {
@@ -64,6 +65,20 @@ Copy/paste examples of queries
     staff_total
     academic_papers
     institution_income
+  }
+}
+```
+
+- Item by ID
+
+```
+query {
+  institution(id: "DEA4606B-4A21-D497-40E9-A5FB7589B536") {
+    id
+    name
+    address
+    country
+    region
   }
 }
 ```

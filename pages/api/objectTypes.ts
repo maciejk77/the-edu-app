@@ -67,4 +67,7 @@ export class Submission {
 
   @Field((_type) => Int)
   institution_income!: number;
+
+  // @Field((_type) => [Subject])
+  // subjects!: Subject[];
 }

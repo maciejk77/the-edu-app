@@ -12,8 +12,10 @@ type Institution {
 }
 
 type Query {
+  institution(id: String!): Institution
   institutions: [Institution!]
   subjects: [Subject!]
+  submission(name: String!): Submission
   submissions: [Submission!]
 }
 
