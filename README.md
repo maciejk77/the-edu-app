@@ -1,6 +1,11 @@
 ## Getting Started
 
-Clone repo and run `yarn dev` for dev mode
+- Clone repo and run `yarn dev` for dev mode
+- Add database instance link to prisma folder in `.env` file ie DATABASE_URL="postgresql://...." (ie Railway.app)
+- Init: `npx prisma generate` to generate Prisma Client
+- Migration: `npx prisma migrate dev` for DB migration
+- Seeding: `npx prisma db seed` for seeding Institutions/Submissions DB tables
+- Some data from GraphQL API is rendered on pages `/submissions` and `/subjects` (work in progress)
 
 ## Project set up
 
@@ -57,13 +62,8 @@ Clone repo and run `yarn dev` for dev mode
 
 ## Notes
 
-- Add database instance link to prisma folder in `.env` file ie DATABASE_URL="postgresql://...." (ie Railway.app)
-- Init: `npx prisma generate` to generate Prisma Client
-- Migration: `npx prisma migrate dev` for DB migration
-- Seeding: `npx prisma db seed` for seeding Institutions/Submissions DB tables
 - Formatting: `npx prisma format` for formatting schema.prisma file
 - Preview: `npx prisma studio` for tables preview
-- GraphQL data is rendered on pages `/submissions` and `/subjects`
 
 ## Queries/Mutations
 
