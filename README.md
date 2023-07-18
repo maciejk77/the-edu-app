@@ -21,6 +21,7 @@ Clone repo and run `yarn dev` for dev mode
 
 ## Notes
 
+- Add database instance link to prisma folder in `.env` file ie DATABASE_URL="postgresql://...." (ie Railway.app)
 - Init: `npx prisma generate` to generate Prisma Client
 - Migration: `npx prisma migrate dev` for DB migration
 - Seeding: `npx prisma db seed` for seeding Institutions/Submissions DB tables
