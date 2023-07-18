@@ -51,11 +51,7 @@
 
 ## To do
 
-- More on GraphQL API
-- Table layout for `submissions` page
-- Filtering and displaying more data
-- Adding new data to collection (DB seed)
-- Charts
+- Charts?
 - Protect routes?
 - Authentication?
 - Tests?
