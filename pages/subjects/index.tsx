@@ -1,5 +1,6 @@
 import Layout from '@/components/layout';
 import { useQuery, gql } from '@apollo/client';
+import { ISubject } from '../api/submissions';
 
 const GET_SUBJECTS = gql`
   {
@@ -14,22 +15,40 @@ export default function Subjects() {
 
   if (loading) return <>LOADING DATA...</>;
 
-  // Non distinct atm, to be filtered out
+  // Non distinct atm, filtered out on FE
   // Add unique to GraphQL
   // Refactor to drop-down
 
-  const collection = data.subjects.map(({ name }: { name: string }) => name);
+  const items = data.subjects.map(({ name }: { name: string }) => name);
+  const collection = [...new Set(items)];
+
+  const Dropdown = () => (
+    <select style={st.container}>
+      <option>--- subject ---</option>
+      {collection.map((item: any, idx) => (
+        <option key={`${item}-${idx}`} name={item}>
+          {item}
+        </option>
+      ))}
+    </select>
+  );
 
   return (
     <Layout
       main={
-        <div>
+        <>
           <h1>Subjects</h1>
-          {collection.map((subjectName: string, idx: number) => (
-            <div key={idx}>{subjectName}</div>
-          ))}
-        </div>
+          <Dropdown />
+        </>
       }
     />
   );
 }
+
+const st = {
+  container: {
+    border: '1px solid black',
+    padding: 5,
+    outline: 'none',
+  },
+};
