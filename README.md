@@ -49,7 +49,7 @@
   - this will be added later, need to create Mutations on GraphQL, useQuery hook will be used for FE
   - form to be created to collect data to be send to DB
 
-## To do
+## Other todo
 
 - Charts?
 - Protect routes?
