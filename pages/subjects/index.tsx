@@ -26,7 +26,7 @@ export default function Subjects() {
     <select style={st.container}>
       <option>--- subject ---</option>
       {collection.map((item: any, idx) => (
-        <option key={`${item}-${idx}`} name={item}>
+        <option key={`${item}-${idx}`} value={item}>
           {item}
         </option>
       ))}

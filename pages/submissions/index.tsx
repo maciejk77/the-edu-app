@@ -23,13 +23,14 @@ export default function Submissions() {
 
   if (loading) return <>LOADING DATA...</>;
 
-  const collection = data.submissions;
+  const { submissions } = data;
 
   return (
     <Layout
       main={
         <>
           <h1>Submissions</h1>
+          <p>Simple render of all submissions</p>
 
           <table style={st.container}>
             <thead>
@@ -46,7 +47,7 @@ export default function Submissions() {
               </tr>
             </thead>
 
-            {collection.map((sub: ISubmission) => (
+            {submissions.map((sub: ISubmission) => (
               <tbody key={sub.id}>
                 <tr>
                   <td style={st.item}>{sub.id}</td>

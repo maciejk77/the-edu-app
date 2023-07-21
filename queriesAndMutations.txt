@@ -1,0 +1,97 @@
+query SubmissionAllSubjects($submissionId: String!) {
+  submissionAllSubjects(submissionId: $submissionId) {
+    academic_papers
+    id
+    name
+    student_rating
+    students_total
+    submissionId
+  }
+}
+
+// VARIABLE
+{
+  "submissionId": "739F3B90-E501-7517-5C0E-2CD91402464F",
+}
+
+query InstitutionAllSubmissions($institutionId: String!) {
+    institution(id: $institutionId) {
+   name
+  }
+  institutionAllSubmissions(institutionId: $institutionId) {
+    academic_papers
+    id
+    institution_id
+    institution_income
+    postgraduates_total
+    staff_total
+    students_total
+    # subjects {
+    #   id      
+    # }
+    undergraduates_total
+    year
+  }
+}
+
+// VARIABLE
+{
+  "institutionId": "EA8BBED7-4106-94AF-48DD-A1414E386AFB",
+}
+
+// ====================
+
+// OTHER QUERIES
+{
+  institutions {
+    id
+    name
+    address
+    country
+    region
+  }
+}
+
+{
+  subjects {
+    id
+    name
+    academic_papers
+    students_total
+    student_rating
+    submissionId
+  }
+}
+
+{
+  submissions {
+    id
+    institution_id
+    year
+    students_total
+    undergraduates_total
+    postgraduates_total
+    staff_total
+    academic_papers
+    institution_income
+  }
+}
+
+
+query Institution($id: String!){
+  institution(id: $id) {
+    id
+    name
+    address
+    country
+    region
+  }
+}
+
+// VARIABLE
+{
+  "id": "DEA4606B-4A21-D497-40E9-A5FB7589B536",
+}
+
+
+

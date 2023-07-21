@@ -36,7 +36,7 @@ export class Subject {
   student_rating!: number;
 
   @Field((_type) => String)
-  submissionId!: string;
+  submissionId!: string; // submission_id!: string;
 }
 
 @ObjectType()
@@ -68,6 +68,6 @@ export class Submission {
   @Field((_type) => Int)
   institution_income!: number;
 
-  // @Field((_type) => [Subject])
-  // subjects!: Subject[];
+  @Field((_type) => [Subject])
+  subjects!: Subject[];
 }

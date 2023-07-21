@@ -16,19 +16,26 @@ model Institution {
   address String
   country String
   region  String
+
+  Submission Submission[]
+  Subject    Subject[]
+  // Subject    Subject?     @relation(fields: [subjectId], references: [id])
+  // subjectId  String?
 }
 
 model Subject {
-  id              String    @id @default(uuid())
+  id              String @id @default(uuid())
   name            String
   academic_papers Int
   students_total  Int
   student_rating  Int
-  Submission      Submission? @relation(fields: [submissionId], references: [id])
-  submissionId    String? @map(name: "submission_id")
 
-  @@index([submissionId], name: "Subjects.submissionId")
-  @@map(name: "subjects")
+  Submission   Submission? @relation(fields: [submissionId], references: [id])
+  submissionId String?
+
+  // Institution   Institution[] 
+  Institution   Institution? @relation(fields: [institutionId], references: [id])
+  institutionId String?
 }
 
 model Submission {
@@ -42,4 +49,6 @@ model Submission {
   academic_papers      Int
   institution_income   Int
   subjects             Subject[]
+
+  Institution Institution? @relation(fields: [institution_id], references: [id])
 }

@@ -13,9 +13,12 @@ type Institution {
 
 type Query {
   institution(id: String!): Institution
+  institutionAllSubmissions(institutionId: String!): [Submission!]
   institutions: [Institution!]
   subjects: [Subject!]
-  submission(name: String!): Submission
+  subjectsForSubmission(submissionId: String!): [Subject!]
+  submission(id: String!): Submission
+  submissionAllSubjects(submissionId: String!): [Subject!]
   submissions: [Submission!]
 }
 
@@ -36,6 +39,7 @@ type Submission {
   postgraduates_total: Int!
   staff_total: Int!
   students_total: Int!
+  subjects: [Subject!]!
   undergraduates_total: Int!
   year: Int!
 }
